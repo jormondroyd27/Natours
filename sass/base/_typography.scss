@@ -1,0 +1,104 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    /* font-size: 1rem; */
+    line-height: 1.7;
+    color: $color-grey-dark;
+    padding: 3rem;
+}
+
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        
+    
+        /* 
+        animation-delay: 2s;
+        animation-iteration-count: 3; 
+        */
+    }
+    
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+        animation: moveInRight 1s ease-out;
+    }
+}
+
+.heading-secondary {
+    display: inline-block;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all .5s;
+    box-shadow: inset 0 0 0 0 #7ed56f;
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+        //hover effect I didn't like the look of included in the course: 
+        // transform: skewX(20deg);
+        // transform: skewY(2deg) skewX(15deg) scale(1.1);
+        // text-shadow: .5rem 1rem 2rem rgba(0, 0, 0, .2);
+
+        //hover effect I decided to use
+        outline: none;
+        box-shadow: inset 900px 0 0 0 #55c57a;
+        color: #fff;
+    }
+
+    //other hover effect I liked the look of
+
+    // &:before {
+    //     position: absolute;
+    //     content: "";
+    //     top: 0;
+    //     left: 50%;
+    //     right: 50%;
+    //     bottom: 0;
+    //     opacity: 0;
+    //     background-color: #55c57a;
+    //     transition: all 0.5s ease;
+    // }
+
+    // &:hover:before {
+    //     left: 0;
+    //     right: 0;
+    //     opacity: 1;
+    //     transition: all 0.5s ease;
+    //     z-index: -1;
+    // }
+}
+
+
+
+.heading-tertiary {
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+    
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}
